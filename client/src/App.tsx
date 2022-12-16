@@ -1,7 +1,8 @@
 import { Button } from "@mui/material";
+import Layout from "./components/layout/Layout";
 
 function App() {
-	return <Button variant="contained">Contained</Button>;
+	return <Layout></Layout>;
 }
 
 export default App;
