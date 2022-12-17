@@ -13,6 +13,6 @@ app.get("/", (req: Request, res: Response) => {
   res.send("Express + TypeScript Server");
 });
 
-const db = process.env.dbString;
+const db = process.env.dbString as string;
 connect({ db });
 app.listen(PORT, () => console.log("server running on port", PORT));
