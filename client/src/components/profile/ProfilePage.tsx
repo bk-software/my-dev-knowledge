@@ -7,7 +7,7 @@ interface ProfilePageProps {
  
 const ProfilePage: FunctionComponent<ProfilePageProps> = () => {
     return ( 
-        <Box component='main'>
+        <Box sx={{display:'block'}}  component='main'>
             <Typography component='h2' variant="h2">Ori Guy's Profile</Typography>
         </Box>
      );

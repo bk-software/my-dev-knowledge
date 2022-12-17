@@ -16,11 +16,13 @@ const Main: FunctionComponent<any> = ({children}) => {
     return ( 
         <Container>
         <Box sx={{ mt: 4 }}>{children}</Box>
-        <Typography variant="h5" color="text.secondary">
-          since: 2021
-        </Typography>
+
       </Container>
      );
 }
  
 export default Main;
+
+{/* <Typography variant="h5" color="text.secondary">
+since: 2021
+</Typography> */}
