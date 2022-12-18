@@ -1,7 +1,9 @@
 import { Button } from "@mui/material";
+import Layout from "./components/layout/Layout";
+import Router from "./router/Router";
 
 function App() {
-	return <Button variant="contained">Contained</Button>;
+	return <Router />;
 }
 
 export default App;
