@@ -1,5 +1,6 @@
 import express, { Express, Request, Response } from "express";
 import dotenv from "dotenv";
+import connect from "./connect";
 
 dotenv.config();
 
@@ -11,4 +12,7 @@ app.use(express.json());
 app.get("/", (req: Request, res: Response) => {
   res.send("Express + TypeScript Server");
 });
+
+const db = process.env.dbString as string;
+connect({ db });
 app.listen(PORT, () => console.log("server running on port", PORT));
