@@ -4,6 +4,7 @@ import { User } from "../models/User";
 import { auth, CustomRequest } from "../../middlewares/auth";
 import _ from "lodash";
 
+// get user current logged in user information
 router.get("/", auth, async (req: Request, res: Response) => {
   try {
     let user = await User.findById((req as CustomRequest).payload._id);

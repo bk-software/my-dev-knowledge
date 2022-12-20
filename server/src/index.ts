@@ -1,10 +1,7 @@
-import express, { Express, Request, Response } from "express";
+import express, { Express } from "express";
 import dotenv from "dotenv";
-import connect from "./connect";
-import login from "./routes/login";
-import profile from "./routes/profile";
-import register from "./routes/register";
-import routes from "./routes/routes";
+import dbconnect from "./dbconnect";
+import router from "./api/api";
 
 dotenv.config();
 
@@ -12,14 +9,9 @@ const app: Express = express();
 const PORT = process.env.PORT || 5000;
 
 app.use(express.json());
-app.use(routes.LOGIN, login);
-app.use(routes.REGISTER, register);
-app.use(routes.PROFILE, profile);
 
-app.get("/", (req: Request, res: Response) => {
-  res.send("Express + TypeScript Server");
-});
+router(app);
 
 const db = process.env.dbString as string;
-connect({ db });
+dbconnect({ db });
 app.listen(PORT, () => console.log("server running on port", PORT));
