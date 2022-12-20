@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-import { Url } from "url";
+mongoose.set("strictQuery", false);
 
 type TInput = {
   db: string;
