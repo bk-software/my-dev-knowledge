@@ -1,7 +1,6 @@
 import express from "express";
 const router = express.Router();
 import { User } from "../models/User";
-import routes from "./routes";
 import joi from "joi";
 import bcrypt from "bcrypt";
 import jwt, { Secret } from "jsonwebtoken";

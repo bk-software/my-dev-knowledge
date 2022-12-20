@@ -1,6 +1,5 @@
 import express from "express";
 const router = express.Router();
-import routes from "./routes";
 import joi from "joi";
 import bcrypt from "bcrypt";
 import jwt, { Secret } from "jsonwebtoken";
@@ -11,7 +10,7 @@ const registerSchema = joi.object({
   lastName: joi.string().required().min(2),
   email: joi.string().required().email().min(6),
   password: joi.string().required().min(8),
-  isAdmin: joi.boolean().required(),
+  isAdmin: joi.boolean(),
 });
 
 // add new user
